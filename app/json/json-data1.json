@@ -1,0 +1,6044 @@
+{
+  "rules": [
+    {
+      "tovertex": 4907419817738240,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "product.lead == true"
+      ],
+      "operation": [
+        "func endchat_op()"
+      ],
+      "vertex": 0
+    },
+    {
+      "vertex": 4907419817738240,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "product.lead == true"
+      ],
+      "operation": [
+        "func endchat_op()"
+      ],
+      "tovertex": 1000
+    },
+    {
+      "tovertex": 3,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 0
+    },
+    {
+      "vertex": 0,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 3
+    },
+    {
+      "tovertex": 4950576991305728,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func exists(product.variations) == true"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "vertex": 3
+    },
+    {
+      "vertex": 4950576991305728,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func exists(product.variations) == true"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "tovertex": 4
+    },
+    {
+      "tovertex": 4843521173356544,
+      "message": {
+        "message_id": 6225493086961664,
+        "message": [
+          "What <variations> would you like?",
+          "Awesome! Let's pick a <variations>?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "vertex": 4
+    },
+    {
+      "vertex": 4843521173356544,
+      "message": {
+        "message_id": 6225493086961664,
+        "message": [
+          "What <variations> would you like?",
+          "Awesome! Let's pick a <variations>?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "tovertex": 4
+    },
+    {
+      "tovertex": 504,
+      "message": {
+        "message_id": 6225493086961664,
+        "message": [
+          "What <variations> would you like?",
+          "Awesome! Let's pick a <variations>?"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 4
+    },
+    {
+      "vertex": 4,
+      "message": {
+        "message_id": 6280221439295488,
+        "message": [
+          "Huh? :( I don't quite understand, pick one from below:"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 504
+    },
+    {
+      "tovertex": 6536725123825664,
+      "message": {
+        "message_id": 6225493086961664,
+        "message": [
+          "What <variations> would you like?",
+          "Awesome! Let's pick a <variations>?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "variations.id in text"
+      ],
+      "operation": [
+        "func set_variation_op()"
+      ],
+      "vertex": 4
+    },
+    {
+      "vertex": 6536725123825664,
+      "message": {
+        "message_id": 6225493086961664,
+        "message": [
+          "What <variations> would you like?",
+          "Awesome! Let's pick a <variations>?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "variations.id in text"
+      ],
+      "operation": [
+        "func set_variation_op()"
+      ],
+      "tovertex": 5
+    },
+    {
+      "tovertex": 5427900127903744,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func exists(variation.variations) == true"
+      ],
+      "operation": [],
+      "vertex": 5
+    },
+    {
+      "vertex": 5427900127903744,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func exists(variation.variations) == true"
+      ],
+      "operation": [],
+      "tovertex": 4
+    },
+    {
+      "tovertex": 7,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 5
+    },
+    {
+      "vertex": 5,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 4817117325033472,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.event == false",
+        "func check_carrier_cd() in [shopify,woocommerce]"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 4817117325033472,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.event == false",
+        "func check_carrier_cd() in [shopify,woocommerce]"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 36
+    },
+    {
+      "tovertex": 4803934728224768,
+      "message": {
+        "message_id": 6027819985403904,
+        "message": [
+          "Please choose one of shipping options:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text"
+      ],
+      "operation": [
+        "order.address = none.none"
+      ],
+      "vertex": 36
+    },
+    {
+      "vertex": 4803934728224768,
+      "message": {
+        "message_id": 6027819985403904,
+        "message": [
+          "Please choose one of shipping options:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text"
+      ],
+      "operation": [
+        "order.address = none.none"
+      ],
+      "tovertex": 6
+    },
+    {
+      "tovertex": 4922576220454912,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        "order.address = none.none"
+      ],
+      "vertex": 6
+    },
+    {
+      "vertex": 4922576220454912,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        "order.address = none.none"
+      ],
+      "tovertex": 13
+    },
+    {
+      "tovertex": 4820858040221696,
+      "message": {
+        "message_id": 4862277480087552,
+        "message": [
+          "How many <stuff> would you like? More than 5? Type the number below (e.g. 6)",
+          "You're just like me! More the merrier - how many <stuff> would you like to get? ",
+          "How many <stuff> would you like to purchase?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "vertex": 13
+    },
+    {
+      "vertex": 4820858040221696,
+      "message": {
+        "message_id": 4862277480087552,
+        "message": [
+          "How many <stuff> would you like? More than 5? Type the number below (e.g. 6)",
+          "You're just like me! More the merrier - how many <stuff> would you like to get? ",
+          "How many <stuff> would you like to purchase?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "tovertex": 4
+    },
+    {
+      "tovertex": 513,
+      "message": {
+        "message_id": 4862277480087552,
+        "message": [
+          "How many <stuff> would you like? More than 5? Type the number below (e.g. 6)",
+          "You're just like me! More the merrier - how many <stuff> would you like to get? ",
+          "How many <stuff> would you like to purchase?"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 13
+    },
+    {
+      "vertex": 13,
+      "message": {
+        "message_id": 6318605058703360,
+        "message": [
+          "Hmm, that doesn't seem like a valid number."
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 513
+    },
+    {
+      "tovertex": 5430920026783744,
+      "message": {
+        "message_id": 4862277480087552,
+        "message": [
+          "How many <stuff> would you like? More than 5? Type the number below (e.g. 6)",
+          "You're just like me! More the merrier - how many <stuff> would you like to get? ",
+          "How many <stuff> would you like to purchase?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_quantity_cd() > func doint(0)",
+        "func verify_quantity_cd() <= func doint(product.stock)",
+        "func verify_quantity_cd() <= func doint(product.quantity_limit)"
+      ],
+      "operation": [
+        "order.quantity = func verify_quantity_cd()"
+      ],
+      "vertex": 13
+    },
+    {
+      "vertex": 5430920026783744,
+      "message": {
+        "message_id": 4862277480087552,
+        "message": [
+          "How many <stuff> would you like? More than 5? Type the number below (e.g. 6)",
+          "You're just like me! More the merrier - how many <stuff> would you like to get? ",
+          "How many <stuff> would you like to purchase?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_quantity_cd() > func doint(0)",
+        "func verify_quantity_cd() <= func doint(product.stock)",
+        "func verify_quantity_cd() <= func doint(product.quantity_limit)"
+      ],
+      "operation": [
+        "order.quantity = func verify_quantity_cd()"
+      ],
+      "tovertex": 15
+    },
+    {
+      "tovertex": 6574835710820352,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_user_cd() == func dostr(proxy)"
+      ],
+      "operation": [],
+      "vertex": 15
+    },
+    {
+      "vertex": 6574835710820352,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_user_cd() == func dostr(proxy)"
+      ],
+      "operation": [],
+      "tovertex": -11
+    },
+    {
+      "tovertex": 4787028730314752,
+      "message": {
+        "message_id": 4813749517025280,
+        "message": [
+          "Could you please enter your e-mail again.. :)",
+          "Boing!! I hereby request you to enter your e-mail again.. :)",
+          "Ding ding ding ding! Enter your e-mail again please? :) "
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": -11
+    },
+    {
+      "vertex": 4787028730314752,
+      "message": {
+        "message_id": 4813749517025280,
+        "message": [
+          "Could you please enter your e-mail again.. :)",
+          "Boing!! I hereby request you to enter your e-mail again.. :)",
+          "Ding ding ding ding! Enter your e-mail again please? :) "
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 13
+    },
+    {
+      "tovertex": 701,
+      "message": {
+        "message_id": 4813749517025280,
+        "message": [
+          "Could you please enter your e-mail again.. :)",
+          "Boing!! I hereby request you to enter your e-mail again.. :)",
+          "Ding ding ding ding! Enter your e-mail again please? :) "
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": -11
+    },
+    {
+      "vertex": -11,
+      "message": {
+        "message_id": 4860319646089216,
+        "message": [
+          "Seems like I did not read a valid e-mail. No problem, type it again below:"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 701
+    },
+    {
+      "tovertex": 4897204238024704,
+      "message": {
+        "message_id": 4813749517025280,
+        "message": [
+          "Could you please enter your e-mail again.. :)",
+          "Boing!! I hereby request you to enter your e-mail again.. :)",
+          "Ding ding ding ding! Enter your e-mail again please? :) "
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "vertex": -11
+    },
+    {
+      "vertex": 4897204238024704,
+      "message": {
+        "message_id": 4813749517025280,
+        "message": [
+          "Could you please enter your e-mail again.. :)",
+          "Boing!! I hereby request you to enter your e-mail again.. :)",
+          "Ding ding ding ding! Enter your e-mail again please? :) "
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "tovertex": 4
+    },
+    {
+      "tovertex": 4890987272863744,
+      "message": {
+        "message_id": 4813749517025280,
+        "message": [
+          "Could you please enter your e-mail again.. :)",
+          "Boing!! I hereby request you to enter your e-mail again.. :)",
+          "Ding ding ding ding! Enter your e-mail again please? :) "
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_email_cd() == func dostr(valid)",
+        "quickreply == true"
+      ],
+      "operation": [
+        "func create_verify_user()"
+      ],
+      "vertex": -11
+    },
+    {
+      "vertex": 4890987272863744,
+      "message": {
+        "message_id": 4813749517025280,
+        "message": [
+          "Could you please enter your e-mail again.. :)",
+          "Boing!! I hereby request you to enter your e-mail again.. :)",
+          "Ding ding ding ding! Enter your e-mail again please? :) "
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_email_cd() == func dostr(valid)",
+        "quickreply == true"
+      ],
+      "operation": [
+        "func create_verify_user()"
+      ],
+      "tovertex": -2
+    },
+    {
+      "tovertex": 4714734968373248,
+      "message": {
+        "message_id": 4795421280960512,
+        "message": [
+          "Bingo. Verification complete..",
+          "Yay! Your e-mail is now verified.",
+          "Hurray! E-mail verification complete.",
+          "Sweet! Let's get rollin.."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func exists(buyer.lastName) == false"
+      ],
+      "operation": [],
+      "vertex": -2
+    },
+    {
+      "vertex": 4714734968373248,
+      "message": {
+        "message_id": 4795421280960512,
+        "message": [
+          "Bingo. Verification complete..",
+          "Yay! Your e-mail is now verified.",
+          "Hurray! E-mail verification complete.",
+          "Sweet! Let's get rollin.."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func exists(buyer.lastName) == false"
+      ],
+      "operation": [],
+      "tovertex": -6
+    },
+    {
+      "tovertex": 4805542119735296,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_name_cd() == true",
+        "product.event == false"
+      ],
+      "operation": [
+        "func set_user_name_op()"
+      ],
+      "vertex": -6
+    },
+    {
+      "vertex": 4805542119735296,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_name_cd() == true",
+        "product.event == false"
+      ],
+      "operation": [
+        "func set_user_name_op()"
+      ],
+      "tovertex": 6
+    },
+    {
+      "tovertex": 705,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": -6
+    },
+    {
+      "vertex": -6,
+      "message": {
+        "message_id": 4886014489264128,
+        "message": [
+          "Please enter your full name, (e.g. John Foo)"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 705
+    },
+    {
+      "tovertex": 4918643708133376,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_name_cd() == true",
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [
+        "func set_user_name_op()"
+      ],
+      "vertex": -6
+    },
+    {
+      "vertex": 4918643708133376,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_name_cd() == true",
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [
+        "func set_user_name_op()"
+      ],
+      "tovertex": 31
+    },
+    {
+      "tovertex": 4892971010883584,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.notes == true"
+      ],
+      "operation": [
+        "order.notes = none.none"
+      ],
+      "vertex": 31
+    },
+    {
+      "vertex": 4892971010883584,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.notes == true"
+      ],
+      "operation": [
+        "order.notes = none.none"
+      ],
+      "tovertex": 28
+    },
+    {
+      "tovertex": 4880282066878464,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.event == false"
+      ],
+      "operation": [
+        "order.address = none.none"
+      ],
+      "vertex": 28
+    },
+    {
+      "vertex": 4880282066878464,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.event == false"
+      ],
+      "operation": [
+        "order.address = none.none"
+      ],
+      "tovertex": 6
+    },
+    {
+      "tovertex": 528,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 28
+    },
+    {
+      "vertex": 28,
+      "message": {
+        "message_id": 4871398983991296,
+        "message": [
+          "I did not understand what you wrote. Type \"Yes\" to enter your notes or \"No\" to continue checkout."
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 528
+    },
+    {
+      "tovertex": 4840562209325056,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 28
+    },
+    {
+      "vertex": 4840562209325056,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 13
+    },
+    {
+      "tovertex": 4807690140254208,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "vertex": 28
+    },
+    {
+      "vertex": 4807690140254208,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "tovertex": 4
+    },
+    {
+      "tovertex": 4925648464248832,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "yes in text"
+      ],
+      "operation": [],
+      "vertex": 28
+    },
+    {
+      "vertex": 4925648464248832,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "yes in text"
+      ],
+      "operation": [],
+      "tovertex": 29
+    },
+    {
+      "tovertex": 4875189913387008,
+      "message": {
+        "message_id": 4830991327690752,
+        "message": [
+          "Go for it, type it below and hit enter once done",
+          "Please type your note below and press enter to continue:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "true == true"
+      ],
+      "operation": [
+        "order.notes = text"
+      ],
+      "vertex": 29
+    },
+    {
+      "vertex": 4875189913387008,
+      "message": {
+        "message_id": 4830991327690752,
+        "message": [
+          "Go for it, type it below and hit enter once done",
+          "Please type your note below and press enter to continue:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "true == true"
+      ],
+      "operation": [
+        "order.notes = text"
+      ],
+      "tovertex": 30
+    },
+    {
+      "tovertex": 4831368294957056,
+      "message": {
+        "message_id": 4730917851496448,
+        "message": [
+          "Duly noted - I'll send this to <shopname> right away!",
+          "Got it - Sending your message to <shopname> now!"
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 30
+    },
+    {
+      "vertex": 4831368294957056,
+      "message": {
+        "message_id": 4730917851496448,
+        "message": [
+          "Duly noted - I'll send this to <shopname> right away!",
+          "Got it - Sending your message to <shopname> now!"
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 31
+    },
+    {
+      "tovertex": 7,
+      "message": {
+        "message_id": 4730917851496448,
+        "message": [
+          "Duly noted - I'll send this to <shopname> right away!",
+          "Got it - Sending your message to <shopname> now!"
+        ],
+        "weight": false
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 30
+    },
+    {
+      "vertex": 30,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 4828692798767104,
+      "message": {
+        "message_id": 4730917851496448,
+        "message": [
+          "Duly noted - I'll send this to <shopname> right away!",
+          "Got it - Sending your message to <shopname> now!"
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_discount_cd() == dostr(auto)"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 30
+    },
+    {
+      "vertex": 4828692798767104,
+      "message": {
+        "message_id": 4730917851496448,
+        "message": [
+          "Duly noted - I'll send this to <shopname> right away!",
+          "Got it - Sending your message to <shopname> now!"
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_discount_cd() == dostr(auto)"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 81
+    },
+    {
+      "tovertex": 4848611380690944,
+      "message": {
+        "message_id": 4730917851496448,
+        "message": [
+          "Duly noted - I'll send this to <shopname> right away!",
+          "Got it - Sending your message to <shopname> now!"
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 30
+    },
+    {
+      "vertex": 4848611380690944,
+      "message": {
+        "message_id": 4730917851496448,
+        "message": [
+          "Duly noted - I'll send this to <shopname> right away!",
+          "Got it - Sending your message to <shopname> now!"
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 208
+    },
+    {
+      "tovertex": 4912642229534720,
+      "message": {
+        "message_id": 4730917851496448,
+        "message": [
+          "Duly noted - I'll send this to <shopname> right away!",
+          "Got it - Sending your message to <shopname> now!"
+        ],
+        "weight": false
+      },
+      "condition": [
+        "true == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 30
+    },
+    {
+      "vertex": 4912642229534720,
+      "message": {
+        "message_id": 4730917851496448,
+        "message": [
+          "Duly noted - I'll send this to <shopname> right away!",
+          "Got it - Sending your message to <shopname> now!"
+        ],
+        "weight": false
+      },
+      "condition": [
+        "true == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 30,
+      "message": {
+        "message_id": 4830991327690752,
+        "message": [
+          "Go for it, type it below and hit enter once done",
+          "Please type your note below and press enter to continue:"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 29
+    },
+    {
+      "vertex": 29,
+      "message": {
+        "message_id": 4730917851496448,
+        "message": [
+          "Duly noted - I'll send this to <shopname> right away!",
+          "Got it - Sending your message to <shopname> now!"
+        ],
+        "weight": false
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 30
+    },
+    {
+      "tovertex": 4865574018482176,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "no in text",
+        "func check_discount_cd() == func dostr(manual)"
+      ],
+      "operation": [
+        "order.notes = none.none"
+      ],
+      "vertex": 28
+    },
+    {
+      "vertex": 4865574018482176,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "no in text",
+        "func check_discount_cd() == func dostr(manual)"
+      ],
+      "operation": [
+        "order.notes = none.none"
+      ],
+      "tovertex": 31
+    },
+    {
+      "tovertex": 4891292752412672,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "no in text",
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 28
+    },
+    {
+      "vertex": 4891292752412672,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "no in text",
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 208
+    },
+    {
+      "tovertex": 4887992338481152,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "no in text"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 28
+    },
+    {
+      "vertex": 4887992338481152,
+      "message": {
+        "message_id": 4698567688060928,
+        "message": [
+          "Would you like to add a note?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "no in text"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 531,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 31
+    },
+    {
+      "vertex": 31,
+      "message": {
+        "message_id": 4897604995383296,
+        "message": [
+          "The coupon code entered is not in use. Try again?"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 531
+    },
+    {
+      "tovertex": 4867280932438016,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.event == false"
+      ],
+      "operation": [
+        "order.address = none.none"
+      ],
+      "vertex": 31
+    },
+    {
+      "vertex": 4867280932438016,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.event == false"
+      ],
+      "operation": [
+        "order.address = none.none"
+      ],
+      "tovertex": 6
+    },
+    {
+      "tovertex": 4867912829501440,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 31
+    },
+    {
+      "vertex": 4867912829501440,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 13
+    },
+    {
+      "tovertex": 4853744806133760,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "vertex": 31
+    },
+    {
+      "vertex": 4853744806133760,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "tovertex": 4
+    },
+    {
+      "tovertex": 4907652014407680,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "yes in text"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 31
+    },
+    {
+      "vertex": 4907652014407680,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "yes in text"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 32
+    },
+    {
+      "tovertex": 4858805686894592,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(accept)"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 32
+    },
+    {
+      "vertex": 4858805686894592,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(accept)"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 33
+    },
+    {
+      "tovertex": 4834801114677248,
+      "message": {
+        "message_id": 4800909510967296,
+        "message": [
+          "Yay! Code accepted - you have saved yourself <currency> <amount>. "
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.event == true",
+        "func verfiy_event_terms_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 33
+    },
+    {
+      "vertex": 4834801114677248,
+      "message": {
+        "message_id": 4800909510967296,
+        "message": [
+          "Yay! Code accepted - you have saved yourself <currency> <amount>. "
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.event == true",
+        "func verfiy_event_terms_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 26
+    },
+    {
+      "tovertex": 7,
+      "message": {
+        "message_id": 4800909510967296,
+        "message": [
+          "Yay! Code accepted - you have saved yourself <currency> <amount>. "
+        ],
+        "weight": false
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 33
+    },
+    {
+      "vertex": 33,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 4786139336540160,
+      "message": {
+        "message_id": 4800909510967296,
+        "message": [
+          "Yay! Code accepted - you have saved yourself <currency> <amount>. "
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 33
+    },
+    {
+      "vertex": 4786139336540160,
+      "message": {
+        "message_id": 4800909510967296,
+        "message": [
+          "Yay! Code accepted - you have saved yourself <currency> <amount>. "
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 208
+    },
+    {
+      "tovertex": 4816817549737984,
+      "message": {
+        "message_id": 4800909510967296,
+        "message": [
+          "Yay! Code accepted - you have saved yourself <currency> <amount>. "
+        ],
+        "weight": false
+      },
+      "condition": [
+        "true == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 33
+    },
+    {
+      "vertex": 4816817549737984,
+      "message": {
+        "message_id": 4800909510967296,
+        "message": [
+          "Yay! Code accepted - you have saved yourself <currency> <amount>. "
+        ],
+        "weight": false
+      },
+      "condition": [
+        "true == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 532,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 32
+    },
+    {
+      "vertex": 32,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 532
+    },
+    {
+      "tovertex": 4892134633111552,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(badqauntity)"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 32
+    },
+    {
+      "vertex": 4892134633111552,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(badqauntity)"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 72
+    },
+    {
+      "tovertex": 4923955710263296,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == zerototal"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 32
+    },
+    {
+      "vertex": 4923955710263296,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == zerototal"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 71
+    },
+    {
+      "tovertex": 4889243247706112,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(ticketsize)"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 32
+    },
+    {
+      "vertex": 4889243247706112,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(ticketsize)"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 73
+    },
+    {
+      "tovertex": 4895492156686336,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(notvariation)"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 32
+    },
+    {
+      "vertex": 4895492156686336,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(notvariation)"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 74
+    },
+    {
+      "tovertex": 4854488707891200,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(limiteduse)"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 32
+    },
+    {
+      "vertex": 4854488707891200,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(limiteduse)"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 75
+    },
+    {
+      "tovertex": 4810358455795712,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(limitedperuse)"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 32
+    },
+    {
+      "vertex": 4810358455795712,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(limitedperuse)"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 76
+    },
+    {
+      "tovertex": 4858024539717632,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(lowquantity)"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 32
+    },
+    {
+      "vertex": 4858024539717632,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(lowquantity)"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 77
+    },
+    {
+      "tovertex": 4920940441894912,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(notoday)"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 32
+    },
+    {
+      "vertex": 4920940441894912,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(notoday)"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 78
+    },
+    {
+      "tovertex": 4792796535848960,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(expire)"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 32
+    },
+    {
+      "vertex": 4792796535848960,
+      "message": {
+        "message_id": 4822082290450432,
+        "message": [
+          "Nice! Please enter the coupon code below:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_discount_code_cd() == func dostr(expire)"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 71
+    },
+    {
+      "tovertex": 4906238030643200,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "no in text",
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 31
+    },
+    {
+      "vertex": 4906238030643200,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "no in text",
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 208
+    },
+    {
+      "tovertex": 4841221889458176,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "no in text",
+        "true == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 31
+    },
+    {
+      "vertex": 4841221889458176,
+      "message": {
+        "message_id": 4815161286197248,
+        "message": [
+          "Do you have a coupon code?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "no in text",
+        "true == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 4910932832550912,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_name_cd() == true",
+        "func check_discount_cd() == dostr(auto)"
+      ],
+      "operation": [
+        "func set_user_name_op()"
+      ],
+      "vertex": -6
+    },
+    {
+      "vertex": 4910932832550912,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_name_cd() == true",
+        "func check_discount_cd() == dostr(auto)"
+      ],
+      "operation": [
+        "func set_user_name_op()"
+      ],
+      "tovertex": 81
+    },
+    {
+      "tovertex": 4877972448215040,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_name_cd() == true",
+        "product.event == true",
+        "func verfiy_event_terms_cd() == true"
+      ],
+      "operation": [
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": -6
+    },
+    {
+      "vertex": 4877972448215040,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_name_cd() == true",
+        "product.event == true",
+        "func verfiy_event_terms_cd() == true"
+      ],
+      "operation": [
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 26
+    },
+    {
+      "tovertex": 4803786820288512,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_name_cd() == true",
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_user_name_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": -6
+    },
+    {
+      "vertex": 4803786820288512,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_name_cd() == true",
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_user_name_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 208
+    },
+    {
+      "tovertex": 4835153503322112,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_name_cd() == true"
+      ],
+      "operation": [
+        "func set_user_name_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": -6
+    },
+    {
+      "vertex": 4835153503322112,
+      "message": {
+        "message_id": 4787889317609472,
+        "message": [
+          "May I know your name?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_name_cd() == true"
+      ],
+      "operation": [
+        "func set_user_name_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 7,
+      "message": {
+        "message_id": 4795421280960512,
+        "message": [
+          "Bingo. Verification complete..",
+          "Yay! Your e-mail is now verified.",
+          "Hurray! E-mail verification complete.",
+          "Sweet! Let's get rollin.."
+        ],
+        "weight": false
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": -2
+    },
+    {
+      "vertex": -2,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 5415823485173760,
+      "message": {
+        "message_id": 4795421280960512,
+        "message": [
+          "Bingo. Verification complete..",
+          "Yay! Your e-mail is now verified.",
+          "Hurray! E-mail verification complete.",
+          "Sweet! Let's get rollin.."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.event == false"
+      ],
+      "operation": [],
+      "vertex": -2
+    },
+    {
+      "vertex": 5415823485173760,
+      "message": {
+        "message_id": 4795421280960512,
+        "message": [
+          "Bingo. Verification complete..",
+          "Yay! Your e-mail is now verified.",
+          "Hurray! E-mail verification complete.",
+          "Sweet! Let's get rollin.."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.event == false"
+      ],
+      "operation": [],
+      "tovertex": 6
+    },
+    {
+      "tovertex": 4666792395931648,
+      "message": {
+        "message_id": 4795421280960512,
+        "message": [
+          "Bingo. Verification complete..",
+          "Yay! Your e-mail is now verified.",
+          "Hurray! E-mail verification complete.",
+          "Sweet! Let's get rollin.."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [],
+      "vertex": -2
+    },
+    {
+      "vertex": 4666792395931648,
+      "message": {
+        "message_id": 4795421280960512,
+        "message": [
+          "Bingo. Verification complete..",
+          "Yay! Your e-mail is now verified.",
+          "Hurray! E-mail verification complete.",
+          "Sweet! Let's get rollin.."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [],
+      "tovertex": 31
+    },
+    {
+      "tovertex": 4829449249882112,
+      "message": {
+        "message_id": 4795421280960512,
+        "message": [
+          "Bingo. Verification complete..",
+          "Yay! Your e-mail is now verified.",
+          "Hurray! E-mail verification complete.",
+          "Sweet! Let's get rollin.."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.event == true",
+        "func verfiy_event_terms_cd() == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": -2
+    },
+    {
+      "vertex": 4829449249882112,
+      "message": {
+        "message_id": 4795421280960512,
+        "message": [
+          "Bingo. Verification complete..",
+          "Yay! Your e-mail is now verified.",
+          "Hurray! E-mail verification complete.",
+          "Sweet! Let's get rollin.."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.event == true",
+        "func verfiy_event_terms_cd() == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 26
+    },
+    {
+      "tovertex": 4978131152666624,
+      "message": {
+        "message_id": 4813749517025280,
+        "message": [
+          "Could you please enter your e-mail again.. :)",
+          "Boing!! I hereby request you to enter your e-mail again.. :)",
+          "Ding ding ding ding! Enter your e-mail again please? :) "
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_email_cd() != func dostr(invalid)"
+      ],
+      "operation": [
+        "buyer.email = func check_email_cd()",
+        "func send_verify_mail()"
+      ],
+      "vertex": -11
+    },
+    {
+      "vertex": 4978131152666624,
+      "message": {
+        "message_id": 4813749517025280,
+        "message": [
+          "Could you please enter your e-mail again.. :)",
+          "Boing!! I hereby request you to enter your e-mail again.. :)",
+          "Ding ding ding ding! Enter your e-mail again please? :) "
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_email_cd() != func dostr(invalid)"
+      ],
+      "operation": [
+        "buyer.email = func check_email_cd()",
+        "func send_verify_mail()"
+      ],
+      "tovertex": -1
+    },
+    {
+      "tovertex": 4850867446480896,
+      "message": {
+        "message_id": 4906864408002560,
+        "message": [
+          "We just sent you a 4 digit code to verify your e-mail, it should be in your inbox (do check your other folders too - just in case it ends up there). Kindly key it in below, type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": -1
+    },
+    {
+      "vertex": 4850867446480896,
+      "message": {
+        "message_id": 4906864408002560,
+        "message": [
+          "We just sent you a 4 digit code to verify your e-mail, it should be in your inbox (do check your other folders too - just in case it ends up there). Kindly key it in below, type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": -11
+    },
+    {
+      "tovertex": 703,
+      "message": {
+        "message_id": 4906864408002560,
+        "message": [
+          "We just sent you a 4 digit code to verify your e-mail, it should be in your inbox (do check your other folders too - just in case it ends up there). Kindly key it in below, type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": -1
+    },
+    {
+      "vertex": -1,
+      "message": {
+        "message_id": 4787420830629888,
+        "message": [
+          "The 4 digit code you entered did not match. If you noticed a spelling mistake, type \"change\" to enter a new e-mail address."
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 703
+    },
+    {
+      "tovertex": 5436085798699008,
+      "message": {
+        "message_id": 4906864408002560,
+        "message": [
+          "We just sent you a 4 digit code to verify your e-mail, it should be in your inbox (do check your other folders too - just in case it ends up there). Kindly key it in below, type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "buyer.code in text"
+      ],
+      "operation": [
+        "func create_verify_user()"
+      ],
+      "vertex": -1
+    },
+    {
+      "vertex": 5436085798699008,
+      "message": {
+        "message_id": 4906864408002560,
+        "message": [
+          "We just sent you a 4 digit code to verify your e-mail, it should be in your inbox (do check your other folders too - just in case it ends up there). Kindly key it in below, type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "buyer.code in text"
+      ],
+      "operation": [
+        "func create_verify_user()"
+      ],
+      "tovertex": -2
+    },
+    {
+      "tovertex": 5052090489503744,
+      "message": {
+        "message_id": 4906864408002560,
+        "message": [
+          "We just sent you a 4 digit code to verify your e-mail, it should be in your inbox (do check your other folders too - just in case it ends up there). Kindly key it in below, type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "change in text"
+      ],
+      "operation": [],
+      "vertex": -1
+    },
+    {
+      "vertex": 5052090489503744,
+      "message": {
+        "message_id": 4906864408002560,
+        "message": [
+          "We just sent you a 4 digit code to verify your e-mail, it should be in your inbox (do check your other folders too - just in case it ends up there). Kindly key it in below, type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "change in text"
+      ],
+      "operation": [],
+      "tovertex": -11
+    },
+    {
+      "tovertex": 6721935656353792,
+      "message": {
+        "message_id": 4906864408002560,
+        "message": [
+          "We just sent you a 4 digit code to verify your e-mail, it should be in your inbox (do check your other folders too - just in case it ends up there). Kindly key it in below, type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "resend in text"
+      ],
+      "operation": [
+        "func send_verify_mail()"
+      ],
+      "vertex": -1
+    },
+    {
+      "vertex": 6721935656353792,
+      "message": {
+        "message_id": 4906864408002560,
+        "message": [
+          "We just sent you a 4 digit code to verify your e-mail, it should be in your inbox (do check your other folders too - just in case it ends up there). Kindly key it in below, type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "resend in text"
+      ],
+      "operation": [
+        "func send_verify_mail()"
+      ],
+      "tovertex": 706
+    },
+    {
+      "tovertex": 7,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 15
+    },
+    {
+      "vertex": 15,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 6579238253625344,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func exists(buyer.email) == true",
+        "func user_email_cd() == false"
+      ],
+      "operation": [
+        "func send_verify_mail()"
+      ],
+      "vertex": 15
+    },
+    {
+      "vertex": 6579238253625344,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func exists(buyer.email) == true",
+        "func user_email_cd() == false"
+      ],
+      "operation": [
+        "func send_verify_mail()"
+      ],
+      "tovertex": -31
+    },
+    {
+      "tovertex": 4802546111610880,
+      "message": {
+        "message_id": 6521653714485248,
+        "message": [
+          "I just sent a code on <useremail>, your registered account, please verify that code. you can type 'change' if you want to change your registered email"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": -31
+    },
+    {
+      "vertex": 4802546111610880,
+      "message": {
+        "message_id": 6521653714485248,
+        "message": [
+          "I just sent a code on <useremail>, your registered account, please verify that code. you can type 'change' if you want to change your registered email"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 13
+    },
+    {
+      "tovertex": 703,
+      "message": {
+        "message_id": 6521653714485248,
+        "message": [
+          "I just sent a code on <useremail>, your registered account, please verify that code. you can type 'change' if you want to change your registered email"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": -31
+    },
+    {
+      "vertex": -31,
+      "message": {
+        "message_id": 4787420830629888,
+        "message": [
+          "The 4 digit code you entered did not match. If you noticed a spelling mistake, type \"change\" to enter a new e-mail address."
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 703
+    },
+    {
+      "tovertex": 4864688382803968,
+      "message": {
+        "message_id": 6521653714485248,
+        "message": [
+          "I just sent a code on <useremail>, your registered account, please verify that code. you can type 'change' if you want to change your registered email"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "vertex": -31
+    },
+    {
+      "vertex": 4864688382803968,
+      "message": {
+        "message_id": 6521653714485248,
+        "message": [
+          "I just sent a code on <useremail>, your registered account, please verify that code. you can type 'change' if you want to change your registered email"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "tovertex": 4
+    },
+    {
+      "tovertex": 4917002493755392,
+      "message": {
+        "message_id": 6521653714485248,
+        "message": [
+          "I just sent a code on <useremail>, your registered account, please verify that code. you can type 'change' if you want to change your registered email"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "buyer.code in text"
+      ],
+      "operation": [
+        "buyer.emailverified = true"
+      ],
+      "vertex": -31
+    },
+    {
+      "vertex": 4917002493755392,
+      "message": {
+        "message_id": 6521653714485248,
+        "message": [
+          "I just sent a code on <useremail>, your registered account, please verify that code. you can type 'change' if you want to change your registered email"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "buyer.code in text"
+      ],
+      "operation": [
+        "buyer.emailverified = true"
+      ],
+      "tovertex": -2
+    },
+    {
+      "tovertex": 4905465137856512,
+      "message": {
+        "message_id": 6521653714485248,
+        "message": [
+          "I just sent a code on <useremail>, your registered account, please verify that code. you can type 'change' if you want to change your registered email"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "resend in text"
+      ],
+      "operation": [
+        "func send_verify_mail()"
+      ],
+      "vertex": -31
+    },
+    {
+      "vertex": 4905465137856512,
+      "message": {
+        "message_id": 6521653714485248,
+        "message": [
+          "I just sent a code on <useremail>, your registered account, please verify that code. you can type 'change' if you want to change your registered email"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "resend in text"
+      ],
+      "operation": [
+        "func send_verify_mail()"
+      ],
+      "tovertex": 706
+    },
+    {
+      "tovertex": 4830727002652672,
+      "message": {
+        "message_id": 6521653714485248,
+        "message": [
+          "I just sent a code on <useremail>, your registered account, please verify that code. you can type 'change' if you want to change your registered email"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "change in text"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": -31
+    },
+    {
+      "vertex": 4830727002652672,
+      "message": {
+        "message_id": 6521653714485248,
+        "message": [
+          "I just sent a code on <useremail>, your registered account, please verify that code. you can type 'change' if you want to change your registered email"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "change in text"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": -11
+    },
+    {
+      "tovertex": 5916765318021120,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.event == false"
+      ],
+      "operation": [],
+      "vertex": 15
+    },
+    {
+      "vertex": 5916765318021120,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.event == false"
+      ],
+      "operation": [],
+      "tovertex": 6
+    },
+    {
+      "tovertex": 5935999792185344,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [],
+      "vertex": 15
+    },
+    {
+      "vertex": 5935999792185344,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [],
+      "tovertex": 31
+    },
+    {
+      "tovertex": 4820674900131840,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_discount_cd() == dostr(auto)"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 15
+    },
+    {
+      "vertex": 4820674900131840,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_discount_cd() == dostr(auto)"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 81
+    },
+    {
+      "tovertex": 5878591648694272,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.event == true",
+        "func verfiy_event_terms_cd() == true"
+      ],
+      "operation": [
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 15
+    },
+    {
+      "vertex": 5878591648694272,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.event == true",
+        "func verfiy_event_terms_cd() == true"
+      ],
+      "operation": [
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 26
+    },
+    {
+      "tovertex": 4924465200758784,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 15
+    },
+    {
+      "vertex": 4924465200758784,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 208
+    },
+    {
+      "tovertex": 4644966781419520,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "true == true"
+      ],
+      "operation": [
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 15
+    },
+    {
+      "vertex": 4644966781419520,
+      "message": {
+        "message_id": 6037130081992704,
+        "message": [
+          "Okay, Sure!",
+          "Sure thing!",
+          "Yes, of course."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "true == true"
+      ],
+      "operation": [
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 5421883616919552,
+      "message": {
+        "message_id": 4862277480087552,
+        "message": [
+          "How many <stuff> would you like? More than 5? Type the number below (e.g. 6)",
+          "You're just like me! More the merrier - how many <stuff> would you like to get? ",
+          "How many <stuff> would you like to purchase?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_quantity_cd() > func doint(0)",
+        "func verify_quantity_cd() > func doint(product.stock)"
+      ],
+      "operation": [],
+      "vertex": 13
+    },
+    {
+      "vertex": 5421883616919552,
+      "message": {
+        "message_id": 4862277480087552,
+        "message": [
+          "How many <stuff> would you like? More than 5? Type the number below (e.g. 6)",
+          "You're just like me! More the merrier - how many <stuff> would you like to get? ",
+          "How many <stuff> would you like to purchase?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_quantity_cd() > func doint(0)",
+        "func verify_quantity_cd() > func doint(product.stock)"
+      ],
+      "operation": [],
+      "tovertex": 515
+    },
+    {
+      "tovertex": 5387216251518976,
+      "message": {
+        "message_id": 4862277480087552,
+        "message": [
+          "How many <stuff> would you like? More than 5? Type the number below (e.g. 6)",
+          "You're just like me! More the merrier - how many <stuff> would you like to get? ",
+          "How many <stuff> would you like to purchase?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_quantity_cd() > func doint(0)",
+        "func verify_quantity_cd() <= func doint(product.stock)",
+        "func verify_quantity_cd() > func doint(product.quantity_limit)"
+      ],
+      "operation": [],
+      "vertex": 13
+    },
+    {
+      "vertex": 5387216251518976,
+      "message": {
+        "message_id": 4862277480087552,
+        "message": [
+          "How many <stuff> would you like? More than 5? Type the number below (e.g. 6)",
+          "You're just like me! More the merrier - how many <stuff> would you like to get? ",
+          "How many <stuff> would you like to purchase?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_quantity_cd() > func doint(0)",
+        "func verify_quantity_cd() <= func doint(product.stock)",
+        "func verify_quantity_cd() > func doint(product.quantity_limit)"
+      ],
+      "operation": [],
+      "tovertex": 512
+    },
+    {
+      "tovertex": 506,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 6
+    },
+    {
+      "vertex": 6,
+      "message": {
+        "message_id": 5691726094139392,
+        "message": [
+          "Hmm. I'm not sure what you meant. Feel free to add a new one or choose the existing address below:"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 506
+    },
+    {
+      "tovertex": 4909972907360256,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.address = none.none",
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "vertex": 6
+    },
+    {
+      "vertex": 4909972907360256,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.address = none.none",
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "tovertex": 4
+    },
+    {
+      "tovertex": 5425152154140672,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() == true",
+        "func check_carrier_cd() == jumper-ship",
+        "product.notes == true"
+      ],
+      "operation": [],
+      "vertex": 6
+    },
+    {
+      "vertex": 5425152154140672,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() == true",
+        "func check_carrier_cd() == jumper-ship",
+        "product.notes == true"
+      ],
+      "operation": [],
+      "tovertex": 28
+    },
+    {
+      "tovertex": 4878356579352576,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == novalidshopify"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 6
+    },
+    {
+      "vertex": 4878356579352576,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == novalidshopify"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 537
+    },
+    {
+      "tovertex": 4913154941255680,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == novalidwoocommerce"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 6
+    },
+    {
+      "vertex": 4913154941255680,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == novalidwoocommerce"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 537
+    },
+    {
+      "tovertex": 4822341414551552,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == waitshopify"
+      ],
+      "operation": [],
+      "vertex": 6
+    },
+    {
+      "vertex": 4822341414551552,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == waitshopify"
+      ],
+      "operation": [],
+      "tovertex": 637
+    },
+    {
+      "tovertex": 4898316902989824,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == shopify"
+      ],
+      "operation": [],
+      "vertex": 6
+    },
+    {
+      "vertex": 4898316902989824,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == shopify"
+      ],
+      "operation": [],
+      "tovertex": 36
+    },
+    {
+      "tovertex": 4805470783012864,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == woocommerce"
+      ],
+      "operation": [],
+      "vertex": 6
+    },
+    {
+      "vertex": 4805470783012864,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == woocommerce"
+      ],
+      "operation": [],
+      "tovertex": 36
+    },
+    {
+      "tovertex": 4871706627801088,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == jumper-ship",
+        "func check_discount_cd() == manual"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 6
+    },
+    {
+      "vertex": 4871706627801088,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == jumper-ship",
+        "func check_discount_cd() == manual"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 31
+    },
+    {
+      "tovertex": 4898671506227200,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == jumper-ship",
+        "func check_discount_cd() == auto"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 6
+    },
+    {
+      "vertex": 4898671506227200,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == jumper-ship",
+        "func check_discount_cd() == auto"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 81
+    },
+    {
+      "tovertex": 4795202791276544,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == jumper-ship",
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 6
+    },
+    {
+      "vertex": 4795202791276544,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == jumper-ship",
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 208
+    },
+    {
+      "tovertex": 4808532020953088,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == jumper-ship"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 6
+    },
+    {
+      "vertex": 4808532020953088,
+      "message": {
+        "message_id": 5200313652871168,
+        "message": [
+          "Please confirm your address or feel free to add a new one by clicking 'Add new address' - type \"cancel\" if you've changed your mind:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func verify_address_cd() != false",
+        "func check_carrier_cd() == jumper-ship"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 536,
+      "message": {
+        "message_id": 6027819985403904,
+        "message": [
+          "Please choose one of shipping options:"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 36
+    },
+    {
+      "vertex": 36,
+      "message": {
+        "message_id": 5942745273204736,
+        "message": [
+          "Please choose from the shipping services below:"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 536
+    },
+    {
+      "tovertex": 4869528609619968,
+      "message": {
+        "message_id": 6027819985403904,
+        "message": [
+          "Please choose one of shipping options:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_shipping_rate_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 36
+    },
+    {
+      "vertex": 4869528609619968,
+      "message": {
+        "message_id": 6027819985403904,
+        "message": [
+          "Please choose one of shipping options:"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_shipping_rate_cd() == true"
+      ],
+      "operation": [
+        "func set_shipping_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 37
+    },
+    {
+      "tovertex": 17,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 7
+    },
+    {
+      "vertex": 7,
+      "message": {
+        "message_id": 4857537715240960,
+        "message": [
+          "Please use one of the following checkout methods:"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 17
+    },
+    {
+      "tovertex": 4839607115972608,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.notes == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 4839607115972608,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.notes == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 28
+    },
+    {
+      "tovertex": 6030523164000256,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.event == false"
+      ],
+      "operation": [
+        "order.address = none.none"
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 6030523164000256,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.event == false"
+      ],
+      "operation": [
+        "order.address = none.none"
+      ],
+      "tovertex": 6
+    },
+    {
+      "tovertex": 4791322019889152,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 4791322019889152,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 13
+    },
+    {
+      "tovertex": 4903273832120320,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 4903273832120320,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "back in text",
+        "order.variation != product.key"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "tovertex": 4
+    },
+    {
+      "tovertex": 4871355044462592,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "t5@n5@cf@11 in text"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 4871355044462592,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "t5@n5@cf@11 in text"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 519
+    },
+    {
+      "tovertex": 4902021849153536,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_old_order_cd() == true",
+        "product.online_event == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 4902021849153536,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_old_order_cd() == true",
+        "product.online_event == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 21
+    },
+    {
+      "tovertex": 4897132901302272,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_old_order_cd() == true",
+        "product.event == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 4897132901302272,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_old_order_cd() == true",
+        "product.event == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 18
+    },
+    {
+      "tovertex": 4836520913534976,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_old_order_cd() == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 4836520913534976,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_old_order_cd() == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 9
+    },
+    {
+      "tovertex": 4802025346826240,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_pay_cd() == func dostr(chargeable)"
+      ],
+      "operation": [
+        "func send_message_first_op()",
+        "func do_payment_op()"
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 4802025346826240,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_pay_cd() == func dostr(chargeable)"
+      ],
+      "operation": [
+        "func send_message_first_op()",
+        "func do_payment_op()"
+      ],
+      "tovertex": 509
+    },
+    {
+      "tovertex": 4848272480927744,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_pay_cd() == func dostr(pending)"
+      ],
+      "operation": [
+        "func send_message_first_op()",
+        "func do_payment_op()"
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 4848272480927744,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_pay_cd() == func dostr(pending)"
+      ],
+      "operation": [
+        "func send_message_first_op()",
+        "func do_payment_op()"
+      ],
+      "tovertex": 520
+    },
+    {
+      "tovertex": 4790654018256896,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_pay_cd() == func dostr(transfer)"
+      ],
+      "operation": [
+        "func send_message_first_op()",
+        "func do_payment_op()"
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 4790654018256896,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_pay_cd() == func dostr(transfer)"
+      ],
+      "operation": [
+        "func send_message_first_op()",
+        "func do_payment_op()"
+      ],
+      "tovertex": 521
+    },
+    {
+      "tovertex": 4841450999119872,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_pay_cd() == func dostr(success)"
+      ],
+      "operation": [
+        "func send_message_first_op()",
+        "func do_payment_op()"
+      ],
+      "vertex": 7
+    },
+    {
+      "vertex": 4841450999119872,
+      "message": {
+        "message_id": 5701241594183680,
+        "message": [
+          "Almost done  - see below the summary of the order. The total amount for your purchase is <procountry> <totalamount> Proceed by clicking on the button below<summary>"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func check_pay_cd() == func dostr(success)"
+      ],
+      "operation": [
+        "func send_message_first_op()",
+        "func do_payment_op()"
+      ],
+      "tovertex": 522
+    },
+    {
+      "tovertex": 6001996058329088,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.askquantity == true"
+      ],
+      "operation": [],
+      "vertex": 5
+    },
+    {
+      "vertex": 6001996058329088,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.askquantity == true"
+      ],
+      "operation": [],
+      "tovertex": 13
+    },
+    {
+      "tovertex": 5307003442298880,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_user_cd() == func dostr(proxy)"
+      ],
+      "operation": [],
+      "vertex": 5
+    },
+    {
+      "vertex": 5307003442298880,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_user_cd() == func dostr(proxy)"
+      ],
+      "operation": [],
+      "tovertex": -11
+    },
+    {
+      "tovertex": 5999729590665216,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func exists(buyer.email) == true",
+        "func user_email_cd() == false"
+      ],
+      "operation": [
+        "func send_verify_mail()"
+      ],
+      "vertex": 5
+    },
+    {
+      "vertex": 5999729590665216,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func exists(buyer.email) == true",
+        "func user_email_cd() == false"
+      ],
+      "operation": [
+        "func send_verify_mail()"
+      ],
+      "tovertex": -31
+    },
+    {
+      "tovertex": 6037851720384512,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.event == false"
+      ],
+      "operation": [],
+      "vertex": 5
+    },
+    {
+      "vertex": 6037851720384512,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "product.event == false"
+      ],
+      "operation": [],
+      "tovertex": 6
+    },
+    {
+      "tovertex": 6474169394921472,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [],
+      "vertex": 5
+    },
+    {
+      "vertex": 6474169394921472,
+      "message": {
+        "message_id": 6297133678329856,
+        "message": [
+          "Cool. Sure :)",
+          "Nice ;)",
+          "Sounds good!",
+          "Indeed!",
+          "Beep, Bop, Beep."
+        ],
+        "weight": false
+      },
+      "condition": [
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [],
+      "tovertex": 31
+    },
+    {
+      "tovertex": 5897884708896768,
+      "message": {
+        "message_id": 6225493086961664,
+        "message": [
+          "What <variations> would you like?",
+          "Awesome! Let's pick a <variations>?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "variations.name in text"
+      ],
+      "operation": [
+        "func set_variation_op()"
+      ],
+      "vertex": 4
+    },
+    {
+      "vertex": 5897884708896768,
+      "message": {
+        "message_id": 6225493086961664,
+        "message": [
+          "What <variations> would you like?",
+          "Awesome! Let's pick a <variations>?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "variations.name in text"
+      ],
+      "operation": [
+        "func set_variation_op()"
+      ],
+      "tovertex": 5
+    },
+    {
+      "tovertex": 4867001021366272,
+      "message": {
+        "message_id": 6225493086961664,
+        "message": [
+          "What <variations> would you like?",
+          "Awesome! Let's pick a <variations>?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "reversevar.id == text"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "vertex": 4
+    },
+    {
+      "vertex": 4867001021366272,
+      "message": {
+        "message_id": 6225493086961664,
+        "message": [
+          "What <variations> would you like?",
+          "Awesome! Let's pick a <variations>?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "reversevar.id == text"
+      ],
+      "operation": [
+        "order.variation = reversevar.key",
+        "func set_variantlist()"
+      ],
+      "tovertex": 4
+    },
+    {
+      "tovertex": 4904623257157632,
+      "message": {
+        "message_id": 6225493086961664,
+        "message": [
+          "What <variations> would you like?",
+          "Awesome! Let's pick a <variations>?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func length(variations) > func doint(10)",
+        "func check_variation_page_cd() == true"
+      ],
+      "operation": [
+        "func set_variantlist()"
+      ],
+      "vertex": 4
+    },
+    {
+      "vertex": 4904623257157632,
+      "message": {
+        "message_id": 6225493086961664,
+        "message": [
+          "What <variations> would you like?",
+          "Awesome! Let's pick a <variations>?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "func length(variations) > func doint(10)",
+        "func check_variation_page_cd() == true"
+      ],
+      "operation": [
+        "func set_variantlist()"
+      ],
+      "tovertex": 4
+    },
+    {
+      "tovertex": 503,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 3
+    },
+    {
+      "vertex": 3,
+      "message": {
+        "message_id": 5671984008527872,
+        "message": [
+          "Type or Click \"jump\" to move forward with your purchase :D"
+        ],
+        "weight": false
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 503
+    },
+    {
+      "tovertex": 6040182880993280,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "vertex": 3
+    },
+    {
+      "vertex": 6040182880993280,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "product.askquantity == true"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "tovertex": 13
+    },
+    {
+      "tovertex": 4865209147588608,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func check_user_cd() == func dostr(proxy)"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "vertex": 3
+    },
+    {
+      "vertex": 4865209147588608,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func check_user_cd() == func dostr(proxy)"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "tovertex": -11
+    },
+    {
+      "tovertex": 4795398279397376,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func exists(buyer.email) == true",
+        "func user_email_cd() == false"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()",
+        "func send_verify_mail()"
+      ],
+      "vertex": 3
+    },
+    {
+      "vertex": 4795398279397376,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func exists(buyer.email) == true",
+        "func user_email_cd() == false"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()",
+        "func send_verify_mail()"
+      ],
+      "tovertex": -31
+    },
+    {
+      "tovertex": 5438264622186496,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "product.event == false"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "vertex": 3
+    },
+    {
+      "vertex": 5438264622186496,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "product.event == false"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "tovertex": 6
+    },
+    {
+      "tovertex": 5896400730587136,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "vertex": 3
+    },
+    {
+      "vertex": 5896400730587136,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "tovertex": 31
+    },
+    {
+      "tovertex": 4806999724261376,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "vertex": 3
+    },
+    {
+      "vertex": 4806999724261376,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func check_discount_cd() == dostr(manual)"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "tovertex": 31
+    },
+    {
+      "tovertex": 4894319899049984,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func check_discount_cd() == dostr(auto)"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "vertex": 3
+    },
+    {
+      "vertex": 4894319899049984,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func check_discount_cd() == dostr(auto)"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()"
+      ],
+      "tovertex": 81
+    },
+    {
+      "tovertex": 4860062501699584,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "product.event == true",
+        "func verfiy_event_terms_cd() == true"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 3
+    },
+    {
+      "vertex": 4860062501699584,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "product.event == true",
+        "func verfiy_event_terms_cd() == true"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 26
+    },
+    {
+      "tovertex": 4920853938569216,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 3
+    },
+    {
+      "vertex": 4920853938569216,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text",
+        "func check_paypal_cd() == true"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 208
+    },
+    {
+      "tovertex": 4842183626588160,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "vertex": 3
+    },
+    {
+      "vertex": 4842183626588160,
+      "message": {
+        "message_id": 6293777429823488,
+        "message": [
+          "Hey <username>, click 'JUMP' to move forward. :D"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "jump in text"
+      ],
+      "operation": [
+        "func order_init_op()",
+        "func set_variation_op()",
+        "func set_cart_cost_op()",
+        "func set_tax_op()",
+        "func set_total_op()"
+      ],
+      "tovertex": 7
+    },
+    {
+      "tovertex": 4841128071266304,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "false == true"
+      ],
+      "operation": [
+        "func set_quickreply(I accept=accept)"
+      ],
+      "vertex": 0
+    },
+    {
+      "vertex": 4841128071266304,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "false == true"
+      ],
+      "operation": [
+        "func set_quickreply(I accept=accept)"
+      ],
+      "tovertex": -25
+    },
+    {
+      "tovertex": 4871143181778944,
+      "message": {
+        "message_id": 4826685706862592,
+        "message": [
+          "Please agree to our terms and usage regarding the further conversations. You can view our terms of use at https://jumper.ai/terms"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "accept in text",
+        "func product_type_cd() == menu"
+      ],
+      "operation": [
+        "func do_audit_op()"
+      ],
+      "vertex": -25
+    },
+    {
+      "vertex": 4871143181778944,
+      "message": {
+        "message_id": 4826685706862592,
+        "message": [
+          "Please agree to our terms and usage regarding the further conversations. You can view our terms of use at https://jumper.ai/terms"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "accept in text",
+        "func product_type_cd() == menu"
+      ],
+      "operation": [
+        "func do_audit_op()"
+      ],
+      "tovertex": 203
+    },
+    {
+      "tovertex": 4897804191268864,
+      "message": {
+        "message_id": 5868823919984640,
+        "message": [
+          "Welcome to <shopname>!"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "variations.id in text"
+      ],
+      "operation": [
+        "func set_variation_op()"
+      ],
+      "vertex": 203
+    },
+    {
+      "vertex": 4897804191268864,
+      "message": {
+        "message_id": 5868823919984640,
+        "message": [
+          "Welcome to <shopname>!"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "variations.id in text"
+      ],
+      "operation": [
+        "func set_variation_op()"
+      ],
+      "tovertex": 204
+    },
+    {
+      "tovertex": 4922615210704896,
+      "message": {
+        "message_id": 4972777106833408,
+        "message": [
+          "Let me take your order!"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "thats in text",
+        "all in text",
+        "func exists(order.variables[products]) == true"
+      ],
+      "operation": [
+        "func create_unverify_user_op()"
+      ],
+      "vertex": 204
+    },
+    {
+      "vertex": 4922615210704896,
+      "message": {
+        "message_id": 4972777106833408,
+        "message": [
+          "Let me take your order!"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "thats in text",
+        "all in text",
+        "func exists(order.variables[products]) == true"
+      ],
+      "operation": [
+        "func create_unverify_user_op()"
+      ],
+      "tovertex": 216
+    },
+    {
+      "tovertex": 4863421904322560,
+      "message": {
+        "message_id": 5454895742189568,
+        "message": [
+          "Ok then... your order has been captured. Would you like to confirm and pay or view/edit the order?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "proceed in text",
+        "checkout in text",
+        "func exists(order.variables[products]) == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 216
+    },
+    {
+      "vertex": 4863421904322560,
+      "message": {
+        "message_id": 5454895742189568,
+        "message": [
+          "Ok then... your order has been captured. Would you like to confirm and pay or view/edit the order?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "proceed in text",
+        "checkout in text",
+        "func exists(order.variables[products]) == true"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 205
+    },
+    {
+      "tovertex": 4867128192663552,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "take in text",
+        "away in text"
+      ],
+      "operation": [
+        "order.variables[takeaway] = true"
+      ],
+      "vertex": 205
+    },
+    {
+      "vertex": 4867128192663552,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "take in text",
+        "away in text"
+      ],
+      "operation": [
+        "order.variables[takeaway] = true"
+      ],
+      "tovertex": 206
+    },
+    {
+      "tovertex": 206,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 205
+    },
+    {
+      "vertex": 205,
+      "message": {
+        "message_id": 6713248850116608,
+        "message": [
+          "Sure your choices is well noted"
+        ],
+        "weight": false
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 206
+    },
+    {
+      "tovertex": 4857241781927936,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "takeaway in text"
+      ],
+      "operation": [
+        "order.variables[takeaway] = true"
+      ],
+      "vertex": 205
+    },
+    {
+      "vertex": 4857241781927936,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "takeaway in text"
+      ],
+      "operation": [
+        "order.variables[takeaway] = true"
+      ],
+      "tovertex": 206
+    },
+    {
+      "tovertex": 4824526680489984,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "have in text",
+        "here in text"
+      ],
+      "operation": [
+        "order.variables[takeaway] = false"
+      ],
+      "vertex": 205
+    },
+    {
+      "vertex": 4824526680489984,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "have in text",
+        "here in text"
+      ],
+      "operation": [
+        "order.variables[takeaway] = false"
+      ],
+      "tovertex": 206
+    },
+    {
+      "tovertex": 5911518478598144,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "add in text",
+        "more in text"
+      ],
+      "operation": [
+        "order.variation = product.key"
+      ],
+      "vertex": 205
+    },
+    {
+      "vertex": 5911518478598144,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "add in text",
+        "more in text"
+      ],
+      "operation": [
+        "order.variation = product.key"
+      ],
+      "tovertex": 203
+    },
+    {
+      "tovertex": 5350866869551104,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "view/update in text"
+      ],
+      "operation": [],
+      "vertex": 205
+    },
+    {
+      "vertex": 5350866869551104,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "view/update in text"
+      ],
+      "operation": [],
+      "tovertex": 217
+    },
+    {
+      "tovertex": 6004998978666496,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "update in text"
+      ],
+      "operation": [],
+      "vertex": 205
+    },
+    {
+      "vertex": 6004998978666496,
+      "message": {
+        "message_id": 5326215602765824,
+        "message": [
+          "Having here or taking it away? ;)"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "update in text"
+      ],
+      "operation": [],
+      "tovertex": 217
+    },
+    {
+      "tovertex": 616,
+      "message": {
+        "message_id": 5454895742189568,
+        "message": [
+          "Ok then... your order has been captured. Would you like to confirm and pay or view/edit the order?"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 216
+    },
+    {
+      "vertex": 216,
+      "message": {
+        "message_id": 5261719286841344,
+        "message": [
+          "Please choose how you want to proceed"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 616
+    },
+    {
+      "tovertex": 4790583889494016,
+      "message": {
+        "message_id": 5454895742189568,
+        "message": [
+          "Ok then... your order has been captured. Would you like to confirm and pay or view/edit the order?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "add in text",
+        "more in text"
+      ],
+      "operation": [
+        "order.variation = product.key"
+      ],
+      "vertex": 216
+    },
+    {
+      "vertex": 4790583889494016,
+      "message": {
+        "message_id": 5454895742189568,
+        "message": [
+          "Ok then... your order has been captured. Would you like to confirm and pay or view/edit the order?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "add in text",
+        "more in text"
+      ],
+      "operation": [
+        "order.variation = product.key"
+      ],
+      "tovertex": 203
+    },
+    {
+      "tovertex": 4805307775582208,
+      "message": {
+        "message_id": 5454895742189568,
+        "message": [
+          "Ok then... your order has been captured. Would you like to confirm and pay or view/edit the order?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "view/update in text"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 216
+    },
+    {
+      "vertex": 4805307775582208,
+      "message": {
+        "message_id": 5454895742189568,
+        "message": [
+          "Ok then... your order has been captured. Would you like to confirm and pay or view/edit the order?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "view/update in text"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 217
+    },
+    {
+      "tovertex": 4879613192830976,
+      "message": {
+        "message_id": 5454895742189568,
+        "message": [
+          "Ok then... your order has been captured. Would you like to confirm and pay or view/edit the order?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "update in text"
+      ],
+      "operation": [
+        ""
+      ],
+      "vertex": 216
+    },
+    {
+      "vertex": 4879613192830976,
+      "message": {
+        "message_id": 5454895742189568,
+        "message": [
+          "Ok then... your order has been captured. Would you like to confirm and pay or view/edit the order?"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "update in text"
+      ],
+      "operation": [
+        ""
+      ],
+      "tovertex": 217
+    },
+    {
+      "tovertex": 214,
+      "message": {
+        "message_id": 4972777106833408,
+        "message": [
+          "Let me take your order!"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 204
+    },
+    {
+      "vertex": 204,
+      "message": {
+        "message_id": 5486949787762688,
+        "message": [
+          "There's nothing for me to process, please place your order from the menu below"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 214
+    },
+    {
+      "tovertex": 4851245672038400,
+      "message": {
+        "message_id": 4972777106833408,
+        "message": [
+          "Let me take your order!"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "that's in text",
+        "all in text",
+        "func exists(order.variables[products]) == true"
+      ],
+      "operation": [
+        "func create_unverify_user_op()"
+      ],
+      "vertex": 204
+    },
+    {
+      "vertex": 4851245672038400,
+      "message": {
+        "message_id": 4972777106833408,
+        "message": [
+          "Let me take your order!"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "that's in text",
+        "all in text",
+        "func exists(order.variables[products]) == true"
+      ],
+      "operation": [
+        "func create_unverify_user_op()"
+      ],
+      "tovertex": 216
+    },
+    {
+      "tovertex": 4861236638384128,
+      "message": {
+        "message_id": 4972777106833408,
+        "message": [
+          "Let me take your order!"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "provariations.id in text"
+      ],
+      "operation": [
+        "func set_variation_op()"
+      ],
+      "vertex": 204
+    },
+    {
+      "vertex": 4861236638384128,
+      "message": {
+        "message_id": 4972777106833408,
+        "message": [
+          "Let me take your order!"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "provariations.id in text"
+      ],
+      "operation": [
+        "func set_variation_op()"
+      ],
+      "tovertex": 204
+    },
+    {
+      "tovertex": 214,
+      "message": {
+        "message_id": 5868823919984640,
+        "message": [
+          "Welcome to <shopname>!"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 203
+    },
+    {
+      "vertex": 203,
+      "message": {
+        "message_id": 5486949787762688,
+        "message": [
+          "There's nothing for me to process, please place your order from the menu below"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 214
+    },
+    {
+      "tovertex": 4899345547657216,
+      "message": {
+        "message_id": 5868823919984640,
+        "message": [
+          "Welcome to <shopname>!"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "variations.name in text"
+      ],
+      "operation": [
+        "func set_variation_op()"
+      ],
+      "vertex": 203
+    },
+    {
+      "vertex": 4899345547657216,
+      "message": {
+        "message_id": 5868823919984640,
+        "message": [
+          "Welcome to <shopname>!"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "variations.name in text"
+      ],
+      "operation": [
+        "func set_variation_op()"
+      ],
+      "tovertex": 204
+    },
+    {
+      "tovertex": -25,
+      "message": {
+        "message_id": 4826685706862592,
+        "message": [
+          "Please agree to our terms and usage regarding the further conversations. You can view our terms of use at https://jumper.ai/terms"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": -25
+    },
+    {
+      "tovertex": 4914120503590912,
+      "message": {
+        "message_id": 4826685706862592,
+        "message": [
+          "Please agree to our terms and usage regarding the further conversations. You can view our terms of use at https://jumper.ai/terms"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "yes in text",
+        "func product_type_cd() == menu"
+      ],
+      "operation": [
+        "func do_audit_op()"
+      ],
+      "vertex": -25
+    },
+    {
+      "vertex": 4914120503590912,
+      "message": {
+        "message_id": 4826685706862592,
+        "message": [
+          "Please agree to our terms and usage regarding the further conversations. You can view our terms of use at https://jumper.ai/terms"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "yes in text",
+        "func product_type_cd() == menu"
+      ],
+      "operation": [
+        "func do_audit_op()"
+      ],
+      "tovertex": 203
+    },
+    {
+      "tovertex": 4891745871462400,
+      "message": {
+        "message_id": 4826685706862592,
+        "message": [
+          "Please agree to our terms and usage regarding the further conversations. You can view our terms of use at https://jumper.ai/terms"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "accept in text"
+      ],
+      "operation": [
+        "func do_audit_op()"
+      ],
+      "vertex": -25
+    },
+    {
+      "vertex": 4891745871462400,
+      "message": {
+        "message_id": 4826685706862592,
+        "message": [
+          "Please agree to our terms and usage regarding the further conversations. You can view our terms of use at https://jumper.ai/terms"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "accept in text"
+      ],
+      "operation": [
+        "func do_audit_op()"
+      ],
+      "tovertex": 2
+    },
+    {
+      "tovertex": 4864884072251392,
+      "message": {
+        "message_id": 4826685706862592,
+        "message": [
+          "Please agree to our terms and usage regarding the further conversations. You can view our terms of use at https://jumper.ai/terms"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "yes in text"
+      ],
+      "operation": [
+        "func do_audit_op()"
+      ],
+      "vertex": -25
+    },
+    {
+      "vertex": 4864884072251392,
+      "message": {
+        "message_id": 4826685706862592,
+        "message": [
+          "Please agree to our terms and usage regarding the further conversations. You can view our terms of use at https://jumper.ai/terms"
+        ],
+        "weight": true
+      },
+      "condition": [
+        "yes in text"
+      ],
+      "operation": [
+        "func do_audit_op()"
+      ],
+      "tovertex": 2
+    },
+    {
+      "tovertex": 4864032863420416,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "product.menuitem == true",
+        "func check_stock_cd() == noopen"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "vertex": 0
+    },
+    {
+      "vertex": 4864032863420416,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "product.menuitem == true",
+        "func check_stock_cd() == noopen"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "tovertex": 20027
+    },
+    {
+      "tovertex": 4831727193161728,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "product.menuitem == true",
+        "func check_stock_cd() == closed"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "vertex": 0
+    },
+    {
+      "vertex": 4831727193161728,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "product.menuitem == true",
+        "func check_stock_cd() == closed"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "tovertex": 20028
+    },
+    {
+      "tovertex": 4857311910690816,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "product.menuitem == true",
+        "func check_stock_cd() == day"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "vertex": 0
+    },
+    {
+      "vertex": 4857311910690816,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "product.menuitem == true",
+        "func check_stock_cd() == day"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "tovertex": 20026
+    },
+    {
+      "tovertex": 4858425783615488,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "product.menuitem == true",
+        "func check_stock_cd() == nodish"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "vertex": 0
+    },
+    {
+      "vertex": 4858425783615488,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "product.menuitem == true",
+        "func check_stock_cd() == nodish"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "tovertex": 20029
+    },
+    {
+      "tovertex": 4904775996932096,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "func check_stock_cd() == false"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "vertex": 0
+    },
+    {
+      "vertex": 4904775996932096,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "func check_stock_cd() == false"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "tovertex": 20000
+    },
+    {
+      "tovertex": 4792467568197632,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "cancel in text"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "vertex": 0
+    },
+    {
+      "vertex": 4792467568197632,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "cancel in text"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "tovertex": 10001
+    },
+    {
+      "tovertex": 4844340169932800,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "no in text"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "vertex": 0
+    },
+    {
+      "vertex": 4844340169932800,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "no in text"
+      ],
+      "operation": [
+        "func endchat_op()",
+        "conversation.active = true"
+      ],
+      "tovertex": 10001
+    },
+    {
+      "tovertex": 4890281556049920,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "func product_type_cd() == menu"
+      ],
+      "operation": [
+        "func set_product_op()",
+        "conversation.active = true",
+        "func order_init_op()",
+        "func set_variation_op()",
+        "flow.typefirst = true"
+      ],
+      "vertex": 0
+    },
+    {
+      "vertex": 4890281556049920,
+      "message": {
+        "message_id": 0,
+        "message": [],
+        "weight": false
+      },
+      "condition": [
+        "func product_type_cd() == menu"
+      ],
+      "operation": [
+        "func set_product_op()",
+        "conversation.active = true",
+        "func order_init_op()",
+        "func set_variation_op()",
+        "flow.typefirst = true"
+      ],
+      "tovertex": 8996
+    },
+    {
+      "tovertex": 4841896333541376,
+      "message": {
+        "message_id": 5820563889061888,
+        "message": [
+          "Hi <username>, Welcome to <shopname>!"
+        ],
+        "weight": false
+      },
+      "condition": [
+        "false == true"
+      ],
+      "operation": [
+        "func set_quickreply(I accept=accept)"
+      ],
+      "vertex": 8996
+    },
+    {
+      "vertex": 4841896333541376,
+      "message": {
+        "message_id": 5820563889061888,
+        "message": [
+          "Hi <username>, Welcome to <shopname>!"
+        ],
+        "weight": false
+      },
+      "condition": [
+        "false == true"
+      ],
+      "operation": [
+        "func set_quickreply(I accept=accept)"
+      ],
+      "tovertex": -25
+    },
+    {
+      "tovertex": 203,
+      "message": {
+        "message_id": 5820563889061888,
+        "message": [
+          "Hi <username>, Welcome to <shopname>!"
+        ],
+        "weight": false
+      },
+      "condition": [],
+      "operation": [],
+      "vertex": 8996
+    },
+    {
+      "vertex": 8996,
+      "message": {
+        "message_id": 5868823919984640,
+        "message": [
+          "Welcome to <shopname>!"
+        ],
+        "weight": true
+      },
+      "condition": [],
+      "operation": [],
+      "tovertex": 203
+    }
+  ]
+}
